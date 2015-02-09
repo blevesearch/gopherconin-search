@@ -38,12 +38,12 @@ function SearchCtrl($scope, $http, $routeParams, $log, $sce, $location) {
             };
         }
         df = $location.search().df;
-        if (df === 'Saturday') {
+        if (df === 'Friday') {
             $scope.filters["start"] = {
                 "field": "start",
                 "end": "2015-02-21T00:00:00Z"
             };
-        } else if (df === 'Sunday') {
+        } else if (df === 'Saturday') {
             $scope.filters["start"] = {
                 "field": "start",
                 "start": "2015-02-21T00:00:00Z"
@@ -93,11 +93,11 @@ function SearchCtrl($scope, $http, $routeParams, $log, $sce, $location) {
                     "size": 2,
                     "date_ranges": [
                         {
-                            "name": "Saturday",
+                            "name": "Friday",
                             "end": "2015-02-21T00:00:00Z"
                         },
                         {
-                            "name": "Sunday",
+                            "name": "Saturday",
                             "start": "2015-02-21T00:00:00Z"
                         }
                     ]
