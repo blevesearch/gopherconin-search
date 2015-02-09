@@ -1,0 +1,101 @@
+.highlight {
+	background: yellow;
+	padding:2px 2px;
+}
+
+.logo {
+  float: left;
+  margin-top: -7px;
+  margin-right: 10px;
+}
+
+.navbar {
+  height: 50px;
+}
+
+.debug {
+	font-family: fixed;
+}
+
+.resultLink {
+	font-size: 25px;
+}
+
+.badgeScore {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  background-color: #777;
+  border-radius: 10px;
+}
+
+.hitmod {
+	font-size:12px;
+}
+
+.uimg {
+  padding-right: 5px;
+}
+
+.resultsTop {
+  margin-top: 20px;
+}
+
+h1.page-header a {
+  color: black;
+}
+
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.title {
+  font-size: 2.3em;
+  vertical-align: middle;
+  font-family: arial-black;
+}
+
+.fosdem {
+  font-size:0.6em;
+  color: #ac3092;
+  vertical-align: top
+}
+
+.minor {
+  font-size:0.7em;
+  font-style: italic;
+}
+
+.nolink {
+  color: black;
+  text-decoration:none;
+}
+
+.nolink:hover {
+  text-decoration:none;
+  color: black;
+}
+
+.nolink:visited {
+  text-decoration:none;
+  color: black;
+}
+
+.nolink:active {
+  text-decoration:none;
+  color: black;
+}
+
+.nolink:link {
+  text-decoration:none;
+  color: black;
+}

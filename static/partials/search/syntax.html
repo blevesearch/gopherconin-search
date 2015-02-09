@@ -1,0 +1,21 @@
+<form class="navbar-form searchbox" role="search">
+    <div class="input-group col-lg-12 col-lg-offset-1">
+        <input ng-model="syntax" type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+        <div class="input-group-btn">
+            <button class="btn btn-primary" type="submit" ng-click="updateSyntax()"><i class="glyphicon glyphicon-search"></i></button>
+        </div>
+    </div>
+    <span class="help-block col-lg-offset-1"></span>
+</form>
+<div ng-show="errorMessage" class="alert alert-danger ng-cloak" role="alert"> {{errorMessage}}
+</div>
+<div ng-show="results.hits.length < 1" ng-include src="'/static/partials/search/noresults.html'"></div>
+<div ng-show="results.hits.length > 0" ng-include src="'/static/partials/search/results.html'"/></div>
+
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12 main">
+<div class="footer text-center">
+<p>Learn how to build search apps like this with <a href="http://blevesearch.com/">bleve</a> in my <a href="http://www.gophercon.in/blog/2014/09/03/marty/">GopherCon India talk</a>.</p>
+</div>
