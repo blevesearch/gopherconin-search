@@ -74,7 +74,7 @@ func startServer(index bleve.Index, addr string) {
 
 func batchIndexEvents(index bleve.Index, path string) {
 	count := 0
-	batch := bleve.NewBatch()
+	batch := index.NewBatch()
 	for event := range parseEvents(path) {
 		batch.Index(event.UID, event)
 		if batch.Size() >= 100 {
@@ -85,7 +85,7 @@ func batchIndexEvents(index bleve.Index, path string) {
 			}
 			count += batch.Size()
 			log.Printf("Indexed %d Events\n", count)
-			batch = bleve.NewBatch()
+			batch = index.NewBatch()
 		}
 	}
 	if batch.Size() > 0 {
