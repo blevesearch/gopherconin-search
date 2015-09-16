@@ -2,11 +2,12 @@ package main
 
 import (
 	"github.com/blevesearch/bleve"
+	"github.com/blevesearch/bleve/analysis/language/en"
 )
 
 func buildMapping() *bleve.IndexMapping {
 	enFieldMapping := bleve.NewTextFieldMapping()
-	enFieldMapping.Analyzer = "en"
+	enFieldMapping.Analyzer = en.AnalyzerName
 
 	eventMapping := bleve.NewDocumentMapping()
 	eventMapping.AddFieldMappingsAt("summary", enFieldMapping)
@@ -14,7 +15,7 @@ func buildMapping() *bleve.IndexMapping {
 
 	mapping := bleve.NewIndexMapping()
 	mapping.DefaultMapping = eventMapping
-	mapping.DefaultAnalyzer = "en"
+	mapping.DefaultAnalyzer = en.AnalyzerName
 
 	return mapping
 }
